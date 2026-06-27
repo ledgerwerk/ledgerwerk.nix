@@ -53,7 +53,7 @@ def generate_package_doc(package: str, metadata: dict[str, str | bool | None]) -
     if homepage:
         lines.append(f"- **Homepage**: {homepage}")
 
-    lines.append(f"- **Usage**: `nix run github:oduit/oduit.nix#{package} -- --help`")
+    lines.append(f"- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#{package} -- --help`")
     lines.append(
         f"- **Nix**: [packages/{package}/package.nix](packages/{package}/package.nix)"
     )

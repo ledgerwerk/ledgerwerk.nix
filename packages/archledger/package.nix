@@ -43,8 +43,8 @@ python3Packages.buildPythonApplication rec {
 
   meta = with lib; {
     description = "Source-first arc42 architecture documentation from Markdown and AsciiDoc records";
-    homepage = "https://github.com/holgern/archledger";
-    changelog = "https://github.com/holgern/archledger/releases/tag/v${version}";
+    homepage = "https://github.com/ledgerwerk/archledger";
+    changelog = "https://github.com/ledgerwerk/archledger/releases/tag/v${version}";
     license = licenses.asl20;
     sourceProvenance = with sourceTypes; [ fromSource ];
     mainProgram = "archledger";

@@ -7,13 +7,13 @@
 }:
 
 python3Packages.buildPythonApplication rec {
-  pname = "taskledger";
-  version = "0.5.0";
+  pname = "releaseledger";
+  version = "0.3.3";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-B/XD++cmB1cF37Y47PN2mUQSGXFm9XzqntTujWiHj1A=";
+    hash = "sha256-D1ZguWN44Cbc+g3L83v8r05Lz4QlZkQlawpDZpQnqxo=";
   };
 
   nativeBuildInputs = [
@@ -28,28 +28,27 @@ python3Packages.buildPythonApplication rec {
     python3Packages.click
     python3Packages.pyyaml
     python3Packages."jinja2"
-    python3Packages."markdown-it-py"
     python3Packages.tomli
   ];
 
-  pythonImportsCheck = [ "taskledger" ];
+  pythonImportsCheck = [ "releaseledger" ];
 
   doInstallCheck = true;
   installCheckPhase = ''
     runHook preInstallCheck
-    $out/bin/taskledger --help > /dev/null
+    $out/bin/releaseledger --help > /dev/null
     runHook postInstallCheck
   '';
 
   passthru.category = "Utilities";
 
   meta = with lib; {
-    description = "Durable project-state storage and CLI for coding workflows";
-    homepage = "https://github.com/holgern/taskledger";
-    changelog = "https://github.com/holgern/taskledger/releases/tag/v${version}";
+    description = "Durable release-state storage and CLI for coding workflows";
+    homepage = "https://github.com/ledgerwerk/releaseledger";
+    changelog = "https://github.com/ledgerwerk/releaseledger/releases/tag/v${version}";
     license = licenses.asl20;
     sourceProvenance = with sourceTypes; [ fromSource ];
-    mainProgram = "taskledger";
+    mainProgram = "releaseledger";
     platforms = platforms.unix;
   };
 }

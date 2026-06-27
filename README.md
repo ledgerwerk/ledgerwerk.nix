@@ -1,4 +1,4 @@
-# holgern-pkgs.nix
+# ledgerwerk.nix
 
 <!-- BEGIN GENERATED PACKAGE DOCS -->
 
@@ -9,8 +9,8 @@
 
 - **Source**: source
 - **License**: Apache-2.0
-- **Homepage**: https://github.com/holgern/archledger
-- **Usage**: `nix run github:oduit/oduit.nix#archledger -- --help`
+- **Homepage**: https://github.com/ledgerwerk/archledger
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#archledger -- --help`
 - **Nix**: [packages/archledger/package.nix](packages/archledger/package.nix)
 
 </details>
@@ -20,7 +20,7 @@
 - **Source**: source
 - **License**: Apache-2.0
 - **Homepage**: https://github.com/ledgerwerk/ledgercore
-- **Usage**: `nix run github:oduit/oduit.nix#ledgercore -- --help`
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#ledgercore -- --help`
 - **Nix**: [packages/ledgercore/package.nix](packages/ledgercore/package.nix)
 
 </details>
@@ -30,17 +30,17 @@
 - **Source**: source
 - **License**: Apache-2.0
 - **Homepage**: https://github.com/ledgerwerk/planledger
-- **Usage**: `nix run github:oduit/oduit.nix#planledger -- --help`
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#planledger -- --help`
 - **Nix**: [packages/planledger/package.nix](packages/planledger/package.nix)
 
 </details>
 <details>
-<summary><strong>releaseledger</strong> - Durable project-state storage and CLI for coding workflows</summary>
+<summary><strong>releaseledger</strong> - Durable release-state storage and CLI for coding workflows</summary>
 
 - **Source**: source
 - **License**: Apache-2.0
-- **Homepage**: https://github.com/holgern/taskledger
-- **Usage**: `nix run github:oduit/oduit.nix#releaseledger -- --help`
+- **Homepage**: https://github.com/ledgerwerk/releaseledger
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#releaseledger -- --help`
 - **Nix**: [packages/releaseledger/package.nix](packages/releaseledger/package.nix)
 
 </details>
@@ -50,7 +50,7 @@
 - **Source**: source
 - **License**: Apache-2.0
 - **Homepage**: https://github.com/ledgerwerk/taskledger
-- **Usage**: `nix run github:oduit/oduit.nix#taskledger -- --help`
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#taskledger -- --help`
 - **Nix**: [packages/taskledger/package.nix](packages/taskledger/package.nix)
 
 </details>
@@ -60,7 +60,7 @@
 - **Source**: source
 - **License**: MIT
 - **Homepage**: https://github.com/ledgerwerk/wikimason
-- **Usage**: `nix run github:oduit/oduit.nix#wikimason -- --help`
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#wikimason -- --help`
 - **Nix**: [packages/wikimason/package.nix](packages/wikimason/package.nix)
 
 </details>
@@ -68,7 +68,7 @@
 
 ### Using Overlay
 
-Alternatively, use an overlay to access packages under the `holgern-pkgs`
+Alternatively, use an overlay to access packages under the `ledgerwerk`
 namespace. Two are provided:
 
 - `overlays.default` exposes `packages.${system}` as-is. Packages are built
@@ -84,18 +84,18 @@ namespace. Two are provided:
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    holgern-pkgs.url = "github:holgern/holgern-pkgs.nix";
+    holgern-pkgs.url = "github:ledgerwerk/ledgerwerk.nix";
   };
 
-  outputs = { nixpkgs, holgern-pkgs, ... }: {
+  outputs = { nixpkgs, ledgerwerk, ... }: {
     # NixOS / nix-darwin configuration
     nixosConfigurations.myhost = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [{
         nixpkgs.overlays = [ holgern-pkgs.overlays.default ];
         environment.systemPackages = [
-          pkgs.holgern-pkgs.taskledger
-          pkgs.holgern-pkgs.archledger
+          pkgs.ledgerwerk.taskledger
+          pkgs.ledgerwerk.archledger
         ];
       }];
     };
@@ -108,7 +108,7 @@ namespace. Two are provided:
 Browse all available tools with the interactive launcher:
 
 ```bash
-nix run github:holgern/holgern-pkgs.nix
+nix run github:ledgerwerk/ledgerwerk.nix
 ```
 
 This opens an fzf picker listing every package with its description.
@@ -117,8 +117,8 @@ Select one and it will be run via `nix run`.
 Or run a specific tool directly:
 
 ```bash
-nix run github:holgern/holgern-pgks.nix#taskledger
-nix run github:holgern/holgern-pgks.nix#archledger
+nix run github:ledgerwerk/ledgerwerk.nix#taskledger
+nix run github:ledgerwerk/ledgerwerk.nix#archledger
 # etc...
 ```
 
@@ -134,9 +134,8 @@ nix develop
 
 ```bash
 # Build a specific package
-nix build .#claude-code
-nix build .#opencode
-nix build .#qwen-code
+nix build .#taskledger
+nix build .#archledger
 # etc...
 ```
 

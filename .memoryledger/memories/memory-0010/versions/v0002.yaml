@@ -1,0 +1,44 @@
+memory:
+  id: memory-0010
+  kind: document
+  title: Installing Nix (Required for Package Testing)
+  status: accepted
+  priority: 100
+  scope: repo
+  scope_path: ''
+  render_target: root_agents
+  source: adopt
+  created_at: '2026-07-07T06:11:17Z'
+  updated_at: '2026-07-07T06:11:44Z'
+  version: 2
+  tags: []
+  origin: adopt:AGENTS.md:7
+  origin_hash: 2b90b4efa4503f3288e301d9921e50656568e85b7a2ba1c60641888ae04b4e69
+  section: ''
+  evidence_refs:
+  - kind: file
+    title: Original manual agent file
+    uri: AGENTS.md
+    excerpt: ''
+    content_hash: 2b90b4efa4503f3288e301d9921e50656568e85b7a2ba1c60641888ae04b4e69
+    line_start: null
+    line_end: null
+    timestamp: ''
+  - kind: user_approval
+    title: Review approval
+    uri: memory:memory-0010#review-v0002
+    excerpt: Adopted from the existing repository AGENTS.md during memoryledger export
+      setup, preserving already-approved project instructions.
+    content_hash: ''
+    line_start: null
+    line_end: null
+    timestamp: '2026-07-07T06:11:44Z'
+reason: Adopted from the existing repository AGENTS.md during memoryledger export
+  setup, preserving already-approved project instructions.
+evidence: 'Adopted from AGENTS.md.
+
+
+  Review reason: Adopted from the existing repository AGENTS.md during memoryledger
+  export setup, preserving already-approved project instructions.
+
+  '

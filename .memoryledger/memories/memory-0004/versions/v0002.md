@@ -1,0 +1,4 @@
+- Root: `flake.nix`, `flake.lock`, `devshell.nix`, `README.md`.
+- Packages live under `packages/<tool>/` with `package.nix`, `default.nix`, optional `update.py`, and lockfiles when needed.
+- Formatting config: `packages/formatter/treefmt.nix`.
+- Utilities and docs: `scripts/`, `docs/`, `.github/`.

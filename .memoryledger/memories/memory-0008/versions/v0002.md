@@ -1,0 +1,4 @@
+- Commit style mirrors history: `<package>: summary`.
+  - Version bumps: `<package>: X -> Y (#123)`; new packages: `<package>: init at X.Y.Z`.
+- PRs: clear description, rationale, and testing notes; link issues; include sample run output for CLIs.
+- Before pushing: run `nix fmt` and `nix flake check`.

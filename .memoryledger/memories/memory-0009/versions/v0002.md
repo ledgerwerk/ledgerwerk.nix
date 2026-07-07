@@ -1,0 +1,3 @@
+- Some tools are unfree; enable unfree if needed in your Nix config.
+- Sandbox experiments: see `packages/claudebox/` for a confined execution wrapper.
+- Pin sources with hashes; avoid network access at build time.

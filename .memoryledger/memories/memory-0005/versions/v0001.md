@@ -1,0 +1,6 @@
+- Enter dev shell: `nix develop`.
+- Build a package: `nix build --accept-flake-config .#<package>` (e.g., `nix build .#claude-code`).
+- Run without installing: `nix run .#<package> -- --help`.
+- Repo checks (builds + lints): `nix flake check`.
+- Format everything: `nix fmt`.
+- Regenerate README package section: `./scripts/generate-package-docs.py`.

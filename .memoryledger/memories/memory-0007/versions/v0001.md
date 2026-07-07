@@ -1,0 +1,4 @@
+- Build locally: `nix build .#<package>`.
+- Run flake checks: `nix flake check`.
+- Per-package checks (when defined): `nix build .#checks.$(nix eval --raw --impure --expr builtins.currentSystem).pkgs-<package>`.
+- For scripts, ensure `shellcheck` passes; enable `doCheck = true` in packages when feasible.

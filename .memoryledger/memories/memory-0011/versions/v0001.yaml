@@ -1,0 +1,22 @@
+memory:
+  id: memory-0011
+  kind: learning
+  title: Preserved repository guidance from pre-memoryledger AGENTS.md
+  status: candidate
+  priority: 100
+  scope: global
+  scope_path: ''
+  render_target: root_agents
+  source: cli
+  created_at: '2026-07-07T06:13:13Z'
+  updated_at: '2026-07-07T06:13:13Z'
+  version: 1
+  tags: []
+  origin: ''
+  origin_hash: ''
+  section: Repository guidance
+  evidence_refs: []
+reason: created
+evidence: Compared AGENTS.md.memoryledger-adopt-1.bak with generated AGENTS.md and
+  docs/agents/documents.md, then preserved guidance that was only listed by title
+  or absent from generated output.

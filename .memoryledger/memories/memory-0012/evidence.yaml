@@ -1,0 +1,10 @@
+evidence:
+- kind: user_approval
+  title: Review approval
+  uri: memory:memory-0012#review-v0002
+  excerpt: User requested final diff check and adding any missing removed memory so
+    it is exported.
+  content_hash: ''
+  line_start: null
+  line_end: null
+  timestamp: '2026-07-07T06:14:46Z'

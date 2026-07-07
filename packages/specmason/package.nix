@@ -1,46 +1,41 @@
 {
   lib,
   flake,
-  fetchurl,
+  fetchPypi,
   python3Packages,
   stdenv,
 }:
 
 python3Packages.buildPythonApplication rec {
-  pname = "planledger";
-  version = "0.2.0";
+  pname = "specmason";
+  version = "0.1.0";
   pyproject = true;
 
-  src = fetchurl {
-    url = "https://files.pythonhosted.org/packages/6b/11/df972782b7ac047b10623521009dac4fd7daf359a4f90cd63bc359c31674/planledger-0.2.0.tar.gz";
-    hash = "sha256-ZVM4m46W5Gs9VB90LVfiUDaaIUyJkDN1zEG2CMRIqyA=";
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-1XNSB1AgIFDr/7GRzhUv2PMT+tLvgAwQsrkIkGlVyMA=";
   };
 
   nativeBuildInputs = [
-    python3Packages.pythonRelaxDepsHook
     python3Packages.setuptools
     python3Packages."setuptools-scm"
     python3Packages.wheel
   ];
-
-  pythonRelaxDeps = [ "ledgercore" ];
 
   propagatedBuildInputs = [
     flake.packages.${stdenv.hostPlatform.system}.ledgercore
     python3Packages.typer
     python3Packages.click
     python3Packages.pyyaml
-    python3Packages."jinja2"
-    python3Packages."markdown-it-py"
     python3Packages.tomli
   ];
 
-  pythonImportsCheck = [ "planledger" ];
+  pythonImportsCheck = [ "specmason" ];
 
   doInstallCheck = true;
   installCheckPhase = ''
     runHook preInstallCheck
-    $out/bin/planledger --help > /dev/null
+    $out/bin/specmason --help > /dev/null
     runHook postInstallCheck
   '';
 
@@ -48,11 +43,11 @@ python3Packages.buildPythonApplication rec {
 
   meta = with lib; {
     description = "Durable project-state storage and CLI for coding workflows";
-    homepage = "https://github.com/ledgerwerk/planledger";
-    changelog = "https://github.com/ledgerwerk/planledger/releases/tag/v${version}";
+    homepage = "https://github.com/ledgerwerk/specmason";
+    changelog = "https://github.com/ledgerwerk/specmason/releases/tag/v${version}";
     license = licenses.asl20;
     sourceProvenance = with sourceTypes; [ fromSource ];
-    mainProgram = "planledger";
+    mainProgram = "specmason";
     platforms = platforms.unix;
   };
 }

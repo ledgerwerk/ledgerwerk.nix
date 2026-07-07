@@ -15,6 +15,16 @@
 
 </details>
 <details>
+<summary><strong>documentledger</strong> - Documentation freshness ledger for coding-agent workflows</summary>
+
+- **Source**: source
+- **License**: Apache-2.0
+- **Homepage**: https://github.com/ledgerwerk/documentledger
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#documentledger -- --help`
+- **Nix**: [packages/documentledger/package.nix](packages/documentledger/package.nix)
+
+</details>
+<details>
 <summary><strong>ledgercore</strong> - Shared core library for ledgerwerk tools</summary>
 
 - **Source**: source
@@ -22,6 +32,16 @@
 - **Homepage**: https://github.com/ledgerwerk/ledgercore
 - **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#ledgercore -- --help`
 - **Nix**: [packages/ledgercore/package.nix](packages/ledgercore/package.nix)
+
+</details>
+<details>
+<summary><strong>memoryledger</strong> - Auditable long-term project memory ledger and AGENTS.md renderer</summary>
+
+- **Source**: source
+- **License**: Apache-2.0
+- **Homepage**: https://github.com/ledgerwerk/memoryledger
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#memoryledger -- --help`
+- **Nix**: [packages/memoryledger/package.nix](packages/memoryledger/package.nix)
 
 </details>
 <details>
@@ -42,6 +62,36 @@
 - **Homepage**: https://github.com/ledgerwerk/releaseledger
 - **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#releaseledger -- --help`
 - **Nix**: [packages/releaseledger/package.nix](packages/releaseledger/package.nix)
+
+</details>
+<details>
+<summary><strong>repairledger</strong> - Durable repair-observation ledger and CLI for agent-discovered tool failures</summary>
+
+- **Source**: source
+- **License**: Apache-2.0
+- **Homepage**: https://github.com/holgern/repairledger
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#repairledger -- --help`
+- **Nix**: [packages/repairledger/package.nix](packages/repairledger/package.nix)
+
+</details>
+<details>
+<summary><strong>reqledger</strong> - Ledgerwerk record owner for requirements and acceptance criteria</summary>
+
+- **Source**: source
+- **License**: Apache-2.0
+- **Homepage**: https://github.com/ledgerwerk/reqledger
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#reqledger -- --help`
+- **Nix**: [packages/reqledger/package.nix](packages/reqledger/package.nix)
+
+</details>
+<details>
+<summary><strong>specmason</strong> - Durable project-state storage and CLI for coding workflows</summary>
+
+- **Source**: source
+- **License**: Apache-2.0
+- **Homepage**: https://github.com/ledgerwerk/specmason
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#specmason -- --help`
+- **Nix**: [packages/specmason/package.nix](packages/specmason/package.nix)
 
 </details>
 <details>

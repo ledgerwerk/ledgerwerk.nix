@@ -8,12 +8,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "taskledger";
-  version = "0.5.1";
+  version = "0.5.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-oiOYd+rj7Y/U+qXKIgUqDlvCwjAS6U8Hl9m7qqtUB6s=";
+    hash = "sha256-wleynq34DsN3zCyDUEbwXQT73y+zEUD++Q2oVUiT5cQ=";
   };
 
   nativeBuildInputs = [

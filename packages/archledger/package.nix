@@ -8,12 +8,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "archledger";
-  version = "0.3.1";
+  version = "0.3.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-iAeD0PfZLTYK3HpJlLP6pIeCf1qXpOjqbsSnYeFcdZg=";
+    hash = "sha256-8ZSC/uAQUUpVQiuog5c8nX8yI4eJSsM9z9AZZb/6AQc=";
   };
 
   nativeBuildInputs = [

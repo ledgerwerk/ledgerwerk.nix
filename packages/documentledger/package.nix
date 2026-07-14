@@ -8,12 +8,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "documentledger";
-  version = "0.1.0";
+  version = "0.1.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-4nLoLOng35g+BThPiv0Kx6Gl9OTF+TglsL7CAmjAsvo=";
+    hash = "sha256-kLut6+2rk16rrVHyMIuvabRosDMeZVc9Cxri/siQOgg=";
   };
 
   nativeBuildInputs = [

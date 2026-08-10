@@ -48,10 +48,13 @@ python3Packages.buildPythonApplication rec {
   };
 
   nativeBuildInputs = [
+    python3Packages.pythonRelaxDepsHook
     python3Packages.setuptools
     python3Packages."setuptools-scm"
     python3Packages.wheel
   ];
+
+  pythonRelaxDeps = [ "ledgercore" ];
 
   propagatedBuildInputs = [
     flake.packages.${stdenv.hostPlatform.system}.ledgercore

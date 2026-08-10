@@ -8,12 +8,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "taskledger";
-  version = "0.5.2";
+  version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-wleynq34DsN3zCyDUEbwXQT73y+zEUD++Q2oVUiT5cQ=";
+    hash = "sha256-Ar/j3IusiIVE+dhL+qm+yXMLiENaypyzXlfKV0PNJoo=";
   };
 
   nativeBuildInputs = [
@@ -27,8 +27,8 @@ python3Packages.buildPythonApplication rec {
     python3Packages.typer
     python3Packages.click
     python3Packages.pyyaml
-    python3Packages."jinja2"
-    python3Packages."markdown-it-py"
+    python3Packages.tomlkit
+    python3Packages.filelock
     python3Packages.tomli
   ];
 

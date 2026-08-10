@@ -7,12 +7,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "ledgercore";
-  version = "0.2.1";
+  version = "0.6.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-C2S/zoBAzfjSybvQiGmGAp3W8LxOXy9I2ymuvon0ikk=";
+    hash = "sha256-9k2Z+5fYnnzhmrcVLFrbufEVfF+PN2ta7GSNrErqxYU=";
   };
 
   nativeBuildInputs = [
@@ -22,6 +22,8 @@ python3Packages.buildPythonApplication rec {
 
   propagatedBuildInputs = [
     python3Packages.pyyaml
+    python3Packages.platformdirs
+    python3Packages.tomlkit
   ];
 
   pythonImportsCheck = [ "ledgercore" ];

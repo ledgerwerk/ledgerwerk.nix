@@ -8,12 +8,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "archledger";
-  version = "0.3.2";
+  version = "0.4.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-8ZSC/uAQUUpVQiuog5c8nX8yI4eJSsM9z9AZZb/6AQc=";
+    hash = "sha256-dDdajgKoyduNWZcaV++emfYDx/1C4OYyj2BSvyfc5ZU=";
   };
 
   nativeBuildInputs = [
@@ -28,6 +28,8 @@ python3Packages.buildPythonApplication rec {
     python3Packages.pyyaml
     python3Packages."jinja2"
     python3Packages.tomli
+    python3Packages.tomlkit
+    python3Packages.filelock
   ];
 
   pythonImportsCheck = [ "archledger" ];

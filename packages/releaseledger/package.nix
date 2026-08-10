@@ -8,12 +8,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "releaseledger";
-  version = "0.3.3";
+  version = "0.4.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-D1ZguWN44Cbc+g3L83v8r05Lz4QlZkQlawpDZpQnqxo=";
+    hash = "sha256-d4y2vHTVjEnNzKPodpc0QXrBrx4AIhXGLXBWxTvndvQ=";
   };
 
   nativeBuildInputs = [
@@ -29,6 +29,8 @@ python3Packages.buildPythonApplication rec {
     python3Packages.pyyaml
     python3Packages."jinja2"
     python3Packages.tomli
+    python3Packages.tomlkit
+    python3Packages.filelock
   ];
 
   pythonImportsCheck = [ "releaseledger" ];

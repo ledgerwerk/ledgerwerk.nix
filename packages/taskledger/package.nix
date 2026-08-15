@@ -8,24 +8,28 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "taskledger";
-  version = "0.6.0";
+  version = "0.6.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Ar/j3IusiIVE+dhL+qm+yXMLiENaypyzXlfKV0PNJoo=";
+    hash = "sha256-XwzgI8IPxC3BlM1Uo/pypynnLe5SVH60KPE+vJ6vF/s=";
   };
 
   nativeBuildInputs = [
     python3Packages.setuptools
     python3Packages."setuptools-scm"
     python3Packages.wheel
+    python3Packages.pythonRelaxDepsHook
   ];
+
+  pythonRelaxDeps = [ "packaging" ];
 
   propagatedBuildInputs = [
     flake.packages.${stdenv.hostPlatform.system}.ledgercore
     python3Packages.typer
     python3Packages.click
+    python3Packages.packaging
     python3Packages.pyyaml
     python3Packages.tomlkit
     python3Packages.filelock

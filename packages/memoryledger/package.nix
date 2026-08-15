@@ -8,12 +8,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "memoryledger";
-  version = "0.2.0";
+  version = "0.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-JpGqRaRNyjVoLl6h7fL5YPXqOj/2pm/IvnF50Pd9tio=";
+    hash = "sha256-seuflLIMZliS9cJT0qeKMv598YzT8dFITarJdE6r37s=";
   };
 
   nativeBuildInputs = [

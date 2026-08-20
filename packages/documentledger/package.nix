@@ -8,12 +8,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "documentledger";
-  version = "0.2.0";
+  version = "0.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-R0i3ot7V3WdVCu1TPXlmNNNh8bvA04gXh/M5XrEJ9z0=";
+    hash = "sha256-3ZHuV/tPF/hI7QMYjZoXwwi971n8JNmGsmNx4Ae3e5A=";
   };
 
   nativeBuildInputs = [
@@ -25,6 +25,7 @@ python3Packages.buildPythonApplication rec {
   propagatedBuildInputs = [
     flake.packages.${stdenv.hostPlatform.system}.ledgercore
     python3Packages.typer
+    python3Packages.click
     python3Packages.pyyaml
     python3Packages.tomli
   ];
@@ -34,7 +35,7 @@ python3Packages.buildPythonApplication rec {
   doInstallCheck = true;
   installCheckPhase = ''
     runHook preInstallCheck
-    $out/bin/docledger --help > /dev/null
+    $out/bin/documentledger --help > /dev/null
     runHook postInstallCheck
   '';
 
@@ -46,7 +47,7 @@ python3Packages.buildPythonApplication rec {
     changelog = "https://github.com/ledgerwerk/documentledger/releases/tag/v${version}";
     license = licenses.asl20;
     sourceProvenance = with sourceTypes; [ fromSource ];
-    mainProgram = "docledger";
+    mainProgram = "documentledger";
     platforms = platforms.unix;
   };
 }

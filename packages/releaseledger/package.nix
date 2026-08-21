@@ -8,12 +8,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "releaseledger";
-  version = "0.4.2";
+  version = "0.4.3";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-d4y2vHTVjEnNzKPodpc0QXrBrx4AIhXGLXBWxTvndvQ=";
+    hash = "sha256-87wjDWLgLLvKMLU/1Z5FeGEnWTiAn01oJGHqR9aDY/M=";
   };
 
   nativeBuildInputs = [

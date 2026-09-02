@@ -1,20 +1,24 @@
 {
   lib,
   flake,
-  fetchPypi,
+  fetchFromGitHub,
   python3Packages,
   stdenv,
 }:
 
 python3Packages.buildPythonApplication rec {
   pname = "releaseledger";
-  version = "0.4.3";
+  version = "0.4.4";
   pyproject = true;
 
-  src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-87wjDWLgLLvKMLU/1Z5FeGEnWTiAn01oJGHqR9aDY/M=";
+  src = fetchFromGitHub {
+    owner = "ledgerwerk";
+    repo = "releaseledger";
+    rev = "v${version}";
+    hash = "sha256-kXr0YP6vkc7ajcuShRGVxBP/NuVkMuxoYzhQx1YIoBI=";
   };
+
+  SETUPTOOLS_SCM_PRETEND_VERSION = version;
 
   nativeBuildInputs = [
     python3Packages.setuptools

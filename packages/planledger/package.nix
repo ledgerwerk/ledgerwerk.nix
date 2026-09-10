@@ -8,12 +8,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "planledger";
-  version = "0.2.0";
+  version = "0.3.0";
   pyproject = true;
 
   src = fetchurl {
-    url = "https://files.pythonhosted.org/packages/6b/11/df972782b7ac047b10623521009dac4fd7daf359a4f90cd63bc359c31674/planledger-0.2.0.tar.gz";
-    hash = "sha256-ZVM4m46W5Gs9VB90LVfiUDaaIUyJkDN1zEG2CMRIqyA=";
+    url = "https://files.pythonhosted.org/packages/4f/cc/31d5d545e966424a8442bec079b1cd61a3a2e8214a5fa287ac00c3a15688/planledger-0.3.0.tar.gz";
+    hash = "sha256-6fZHg1nsgHZNnFGQwdXKYmXsv1orm3tAaftKIqawYB0=";
   };
 
   nativeBuildInputs = [

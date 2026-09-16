@@ -7,13 +7,17 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "ledgercore";
-  version = "0.6.1";
+  version = "0.6.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-9k2Z+5fYnnzhmrcVLFrbufEVfF+PN2ta7GSNrErqxYU=";
+    hash = "sha256-m5lg5cdeGnYxwiOgxcK7pXZTcF6KPaV6jw/gVA0xdZU=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml --replace-fail 'hatchling<1.28' 'hatchling'
+  '';
 
   nativeBuildInputs = [
     python3Packages.hatchling
@@ -24,6 +28,7 @@ python3Packages.buildPythonApplication rec {
     python3Packages.pyyaml
     python3Packages.platformdirs
     python3Packages.tomlkit
+    python3Packages.uuid6
   ];
 
   pythonImportsCheck = [ "ledgercore" ];

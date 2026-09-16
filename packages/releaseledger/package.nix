@@ -8,14 +8,14 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "releaseledger";
-  version = "0.4.7";
+  version = "0.4.8";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ledgerwerk";
     repo = "releaseledger";
     rev = "v${version}";
-    hash = "sha256-3/5zk77dRmXIsbvRBNX37cIzVrUlY0NphzmVu3hydZc=";
+    hash = "sha256-hS9mPSF/M9TP9OydXvShTKWsOtsqHxJv07i1ci8hy3Q=";
   };
 
   SETUPTOOLS_SCM_PRETEND_VERSION = version;

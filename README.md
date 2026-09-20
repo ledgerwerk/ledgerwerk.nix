@@ -55,6 +55,16 @@
 
 </details>
 <details>
+<summary><strong>pyjev</strong> - Reusable, confidence-aware Jev decisions for Python and the shell</summary>
+
+- **Source**: source
+- **License**: Apache-2.0
+- **Homepage**: https://github.com/ledgerwerk/pyjev
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#pyjev -- --help`
+- **Nix**: [packages/pyjev/package.nix](packages/pyjev/package.nix)
+
+</details>
+<details>
 <summary><strong>releaseledger</strong> - Durable release-state storage and CLI for coding workflows</summary>
 
 - **Source**: source

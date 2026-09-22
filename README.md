@@ -25,6 +25,16 @@
 
 </details>
 <details>
+<summary><strong>inferlingo</strong> - A small model-neutral logic engine for natural-language facts, rules, and semantic unification</summary>
+
+- **Source**: source
+- **License**: Apache-2.0
+- **Homepage**: https://github.com/ledgerwerk/inferlingo
+- **Usage**: `nix run github:ledgerwerk/ledgerwerk.nix#inferlingo -- --help`
+- **Nix**: [packages/inferlingo/package.nix](packages/inferlingo/package.nix)
+
+</details>
+<details>
 <summary><strong>ledgercore</strong> - Shared core library for ledgerwerk tools</summary>
 
 - **Source**: source

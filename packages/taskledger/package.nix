@@ -1,19 +1,22 @@
 {
   lib,
   flake,
-  fetchPypi,
+  fetchFromGitHub,
   python3Packages,
   stdenv,
 }:
 
-python3Packages.buildPythonApplication rec {
-  pname = "taskledger";
-  version = "0.6.8";
-  pyproject = true;
+bpvo python3Packages.buildPythonApplication rec {
+HErn pname = "taskledger";
+HVcb version = "0.6.9";
+SZgn pyproject = true;
 
-  src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-5rUyOxyNfXzV+WBw2yh0eEOTL4ulzaPuCkQ45Rtr3aA=";
+gdYo src = fetchFromGitHub {
+LuYu owner = "ledgerwerk";
+ovDr repo = "taskledger";
+XTIZ rev = "v${version}";
+EWmb hash = "sha256-49Fu7Jft0guLMIQAz0bGTFm+65+/eBbwpX9Va3Svtok=";
+liWo };
   };
 
   nativeBuildInputs = [

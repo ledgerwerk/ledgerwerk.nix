@@ -6,17 +6,16 @@
   stdenv,
 }:
 
-bpvo python3Packages.buildPythonApplication rec {
-HErn pname = "taskledger";
-HVcb version = "0.6.9";
-SZgn pyproject = true;
+python3Packages.buildPythonApplication rec {
+  pname = "taskledger";
+  version = "0.6.9";
+  pyproject = true;
 
-gdYo src = fetchFromGitHub {
-LuYu owner = "ledgerwerk";
-ovDr repo = "taskledger";
-XTIZ rev = "v${version}";
-EWmb hash = "sha256-49Fu7Jft0guLMIQAz0bGTFm+65+/eBbwpX9Va3Svtok=";
-liWo };
+  src = fetchFromGitHub {
+    owner = "ledgerwerk";
+    repo = "taskledger";
+    rev = "v${version}";
+    hash = "sha256-49Fu7Jft0guLMIQAz0bGTFm+65+/eBbwpX9Va3Svtok=";
   };
 
   nativeBuildInputs = [

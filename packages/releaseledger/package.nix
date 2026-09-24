@@ -15,7 +15,7 @@ python3Packages.buildPythonApplication rec {
     owner = "ledgerwerk";
     repo = "releaseledger";
     rev = "v${version}";
-    hash = "sha256-G8Mamrt/piyKp8qfAvC0hyF4hGN8ik7cRh08ik7cRh08imm+iOM=";
+    hash = "sha256-G8Mamrt/piyKp8qfAvC0hyF4hGN8ik7cRh08imm+iOM=";
   };
 
   SETUPTOOLS_SCM_PRETEND_VERSION = version;

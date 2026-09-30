@@ -7,12 +7,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "inferlingo";
-  version = "0.1.0";
+  version = "0.1.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-IOK9hbToIizWksg3iSBeii6lMhzzsZhXNmRcFbb1d00=";
+    hash = "sha256-Lz6yDHc1BBoBWMSRrfdCQxYixxbg3MePLdKsn/YW1DE=";
   };
 
   nativeBuildInputs = [

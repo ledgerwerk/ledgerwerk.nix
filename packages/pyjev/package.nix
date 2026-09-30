@@ -49,12 +49,12 @@ let
 in
 python3Packages.buildPythonApplication rec {
   pname = "pyjev";
-  version = "0.1.0";
+  version = "0.1.2";
   pyproject = true;
 
   src = fetchurl {
-    url = "https://files.pythonhosted.org/packages/46/a5/8059efe99d9c340f5fb700e975a447c1ebcccf1c005eab6ff53b31f98943/pyjev-0.1.0.tar.gz";
-    hash = "sha256-SNtkxCqnKy2oRAvSH2JKnWkeG19iq4gwCGan0FPABR8=";
+    url = "https://files.pythonhosted.org/packages/d7/c0/27138caacb41c4735ddd6ba1d73c89c1f3052eb7fff679243aaf271b4815/pyjev-0.1.2.tar.gz";
+    hash = "sha256-7b0/g3GuwSJgMDSTamN3a3yyVD2Itx0hiJVXZ7JK7Hs=";
   };
 
   nativeBuildInputs = [

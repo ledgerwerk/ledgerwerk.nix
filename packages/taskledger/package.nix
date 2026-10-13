@@ -8,14 +8,14 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "taskledger";
-  version = "0.7.3";
+  version = "0.7.4";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ledgerwerk";
     repo = "taskledger";
     rev = "v${version}";
-    hash = "sha256-ld6UePTp2KklViASZtSuMfyP9ooVR/4ipH6XsG4Jhyo=";
+    hash = "sha256-NX8fE13Vvfe51u1N3b/5xU5MCZa39XCxnfeK9cpWBnw=";
   };
 
   nativeBuildInputs = [
